@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<title>TUT Employee Example</title>
+</h:head>
+<h:body>
+	<h2>JSF 2.0 Twitter integration - tweetsList.xhtml</h2>
+	<h:form>
+		<p:dataTable value="#{twittercontroller.tweetList}" var="twitterer">
+			<p:column headerText="Timestamp">
+				<h:outputText value="#{twitterer.timestamp}" />
+			</p:column>
+			<p:column headerText="Tweet Body">
+				<h:outputText value="#{twitterer.tweetBody}" />
+			</p:column>
+			<p:column headerText="Tweet ID">
+				<h:outputText value="#{twitterer.tweetID}" />
+			</p:column>
+		</p:dataTable>
+	</h:form>
+</h:body>
+</html>
